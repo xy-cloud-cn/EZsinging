@@ -2,7 +2,7 @@
 
 > 现在的此软件属于非常早期的版本，会继续保持开发
 
-[English]((https://github.com/xy-cloud-cn/EZsinging/blob/main/README.md)) / 简体中文
+[English]((https://github.com/xy-cloud-cn/EZsinging/blob/master/README.md)) / 简体中文
 
 尽可能用最简单的方式唱歌--其余的交给电脑处理
 
