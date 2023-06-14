@@ -2,7 +2,7 @@
 
 > The current version of this software is a very early version and will continue to be developed
 
-English / [简体中文](https://github.com/xy_cloud/EZsinging/blob/main/README_zh_hans.md)
+English / [简体中文](https://github.com/xy-cloud-cn/EZsinging/blob/main/README_zh_hans.md)
 
 Sing in the easiest way possible - leave the rest to the computer
 
