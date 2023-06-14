@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Setting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        select {
+            width: 200px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0069d9;
+        }
+    </style>
+</head>
+<body>
+<h1>设置</h1>
+<label for="deviceSelect">选择音频设备:</label>
+<select id="deviceSelect">
+</select>
+<button onclick="sendDeviceIndex()">确认</button>
+
+<script>
+    window.onload = function () {
+        window.addEventListener('pywebviewready', function () {
+            window.pywebview.api.enumerate_audio_devices().then(function (devices) {
+                var deviceSelect = document.getElementById("deviceSelect");
+                devices.forEach(function (device) {
+                    var option = document.createElement("option");
+                    option.value = device.index;
+                    option.text = device.name;
+                    deviceSelect.appendChild(option);
+                });
+            });
+        });
+    };
+
+    function sendDeviceIndex() {
+        var deviceSelect = document.getElementById("deviceSelect");
+        var selectedDeviceIndex = deviceSelect.value;
+        window.pywebview.api.send_device_index(selectedDeviceIndex);
+    }
+
+</script>
+</body>
+</html>

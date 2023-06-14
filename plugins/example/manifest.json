@@ -1,0 +1,11 @@
+{
+  "type": "javascript",
+  "name": "example",
+  "version": "1.0.0",
+  "index": "/example.js",
+  "anthor": "xy_cloud",
+  "github": "https://github.com/xy-cloud-cn",
+  "description":"一个样例",
+  "method": "evaluate",
+  "libs": ["/helloworld.js"]
+}

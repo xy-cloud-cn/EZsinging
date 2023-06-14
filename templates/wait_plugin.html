@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  请等待插件加载
+  Please wait for the plugin to load
+<script>
+    window.addEventListener('pywebviewready', function () {
+        window.pywebview.api.load_plugins();
+    });
+</script>
+</body>
+</html>
